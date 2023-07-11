@@ -10,6 +10,7 @@ use Server\Request\ApplicationLayer;
 use Tracy\Debugger;
 use Utils\Htmlv2;
 use Utils\Utils;
+use Shop\Shop;
 
 $Utils = new Utils();
 $Request = new Request();
@@ -17,7 +18,9 @@ $ApplicationLayer = new ApplicationLayer();
 $MemberManager = new MemberManager();
 Debugger::enable();
 
-$MemberManager::addMember(
+$shop = new Shop();
+
+/*$MemberManager::addMember(
     $Utils->uid(),
     "creamgod45",
     "35186392",
@@ -25,4 +28,4 @@ $MemberManager::addMember(
     true,
     true,
     time()
-);
+);*/
