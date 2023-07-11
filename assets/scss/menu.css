@@ -1,0 +1,47 @@
+.menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-bottom: 1px rgba(27, 27, 27, 0.15) solid;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.menu .border {
+  width: 1px;
+  height: 20px;
+  border: 1px black solid;
+  margin: 0px 8px;
+}
+.menu img {
+  border-radius: 3em;
+  margin-right: 8px;
+}
+.menu .menu-item {
+  width: fit-content;
+  height: 28px;
+  padding: 4px 8px;
+  margin: 0px 8px;
+  background-color: #0380ba;
+  border-radius: 2em;
+  display: flex;
+}
+.menu .menu-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 18px;
+  height: 18px;
+}
+.menu .menu-item .name {
+  margin-left: 8px;
+  line-height: 19px;
+}
+.menu .menu-item:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=menu.css.map */
