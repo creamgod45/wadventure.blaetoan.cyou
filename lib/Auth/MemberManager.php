@@ -28,6 +28,10 @@ class MemberManager
     public function __construct()
     {
         self::$Utils = new Utils();
+        self::init();
+    }
+
+    public static function init(){
         self::$conn = new Connection('mysql:host=127.0.0.1;dbname=vvrzmwkq_home', 'vvrzmwkq_home', 'KFw2)rA_p*6g');
         self::$conn->connect();
     }

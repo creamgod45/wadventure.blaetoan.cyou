@@ -7,7 +7,6 @@ use Nette\Utils\Json;
 /**
  * @var Utils\Utils $Utils
  * @var Server\Request $Request
- * @var Auth\MemberManager $MemberManager
  * @var Server\Request\ApplicationLayer $ApplicationLayer
  **/
 $json = file_get_contents('php://input'); // 获取POST请求的原始数据

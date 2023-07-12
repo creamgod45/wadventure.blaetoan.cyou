@@ -3,7 +3,6 @@
 /**
  * @var Utils\Utils $Utils
  * @var Server\Request $Request
- * @var Auth\MemberManager $MemberManager
  * @var Server\Request\ApplicationLayer $ApplicationLayer
  **/
 

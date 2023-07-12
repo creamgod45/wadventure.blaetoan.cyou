@@ -2,18 +2,19 @@
 /**
  * @var Utils\Utils $Utils
  * @var Server\Request $Request
- * @var Auth\MemberManager $MemberManager
  * @var Server\Request\ApplicationLayer $ApplicationLayer
  */
 
+use Auth\MemberManager;
 use Type\String\CGString;
 use Utils\Htmlv2;
 
+$MemberManager = new MemberManager();
 if (
-        $Request->POST('login', true)->Get() &&
-        $Request->CSRF("@login")->equal($Request->POST('CSRF', true)->Get()) &&
-        !(new CGString($Request->POST('username',true)->Get()))->isEmpty() &&
-        !(new CGString($Request->POST('password',true)->Get()))->isEmpty()
+    $Request->POST('login', true)->Get() &&
+    $Request->CSRF("@login")->equal($Request->POST('CSRF', true)->Get()) &&
+    !(new CGString($Request->POST('username', true)->Get()))->isEmpty() &&
+    !(new CGString($Request->POST('password', true)->Get()))->isEmpty()
 ) {
     $Request->SESSION('error_message', true)->Remove();
     $Request->CSRF("@login")->reset();
@@ -21,7 +22,7 @@ if (
     $b = $Request->POST('password', true)->Get();
     $member = $MemberManager::getMember($MemberManager::$ENUM_USE_USERNAME, $a);
     if ($MemberManager->login($member, $b)) {
-        $Utils->goto_page([2,"/index.php"]);
+        $Utils->goto_page([2, "/index.php"]);
         $Request->SESSION('member', true)->Set($member);
         include_once "@login_success.php";
     } else {

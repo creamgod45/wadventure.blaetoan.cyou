@@ -51,7 +51,6 @@ try {
     $Utils = new Utils();
     $Request = new Request();
     $ApplicationLayer = new ApplicationLayer();
-    $MemberManager = new MemberManager();
 } catch (Exception $e) {
     $debug = $e;
     var_dump($debug);
