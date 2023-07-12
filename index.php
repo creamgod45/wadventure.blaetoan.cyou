@@ -35,7 +35,6 @@ require_once 'vendor/autoload.php';
 require_once 'autoload.php';
 
 // Use list
-use Auth\MemberManager;
 use Server\Request;
 use Server\Request\ApplicationLayer;
 use Tracy\Debugger;
