@@ -1,0 +1,17 @@
+.card {
+  width: 128px;
+  min-height: 400px;
+}
+
+.image-preview {
+  padding: 4px;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100% !important;
+  min-height: 128px !important;
+  max-height: 128px !important;
+}
+
+/*# sourceMappingURL=@shop.css.map */
