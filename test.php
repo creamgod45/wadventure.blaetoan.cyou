@@ -18,9 +18,8 @@ $ApplicationLayer = new ApplicationLayer();
 $MemberManager = new MemberManager();
 Debugger::enable();
 
-$shop = new Shop();
 
-/*$MemberManager::addMember(
+$MemberManager::addMember(
     $Utils->uid(),
     "creamgod45",
     "35186392",
@@ -28,4 +27,4 @@ $shop = new Shop();
     true,
     true,
     time()
-);*/
+);

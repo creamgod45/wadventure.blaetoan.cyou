@@ -12,6 +12,7 @@ class ShopInvoice
      * @var ShopItem[]
      */
     public array $items = [];
+    public CoinType $CoinType;
     public float $price = 0.0;
     public float $finalPrice = 0.0;
     public float $discount = 0.0;
@@ -29,10 +30,11 @@ class ShopInvoice
      * @param int $creatAt
      * @param DateTime $updateAt
      */
-    public function __construct(string $InvoiceID, array $items, float $price, float $finalPrice, float $discount, ShopCoupon $Coupons, int $creatAt, DateTime $updateAt)
+    public function __construct(string $InvoiceID, array $items,CoinType $CoinType, float $price, float $finalPrice, float $discount, ShopCoupon $Coupons, int $creatAt, DateTime $updateAt)
     {
         $this->InvoiceID = $InvoiceID;
         $this->items = $items;
+        $this->CoinType = $CoinType;
         $this->price = $price;
         $this->finalPrice = $finalPrice;
         $this->discount = $discount;
@@ -49,12 +51,21 @@ class ShopInvoice
             $this->InvoiceID = md5((new Utils())->uid());
         }
         $this->items = $shopInvoice->items;
+        $this->CoinType = $shopInvoice->CoinType;
         $this->price = $shopInvoice->price;
         $this->finalPrice = $shopInvoice->finalPrice;
         $this->discount = $shopInvoice->discount;
         $this->Coupons = $shopInvoice->Coupons;
         $this->creatAt = $shopInvoice->creatAt;
         $this->updateAt = $shopInvoice->updateAt;
+    }
+
+    /**
+     * @return CoinType
+     */
+    public function getCoinType(): CoinType
+    {
+        return $this->CoinType;
     }
 
     /**

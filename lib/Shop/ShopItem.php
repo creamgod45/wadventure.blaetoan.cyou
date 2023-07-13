@@ -10,6 +10,7 @@ class ShopItem
     public string $ItemID = "";
     public string $name = "";
     public string $description = "無";
+    public CoinType $CoinType;
     public float $price = 0.0;
     public int $amount = 0;
     public int $purchases_num = 0;
@@ -26,16 +27,25 @@ class ShopItem
      * @param int $creatAt
      * @param DateTime $updateAt
      */
-    public function __construct(string $ItemID, string $name, string $description, float $price, int $amount, int $purchases_num, int $creatAt, DateTime $updateAt)
+    public function __construct(string $ItemID, string $name, string $description, CoinType $CoinType, float $price, int $amount, int $purchases_num, int $creatAt, DateTime $updateAt)
     {
         $this->ItemID = $ItemID;
         $this->name = $name;
         $this->description = $description;
+        $this->CoinType = $CoinType;
         $this->price = $price;
         $this->amount = $amount;
         $this->purchases_num = $purchases_num;
         $this->creatAt = $creatAt;
         $this->updateAt = $updateAt;
+    }
+
+    /**
+     * @return CoinType
+     */
+    public function getCoinType(): CoinType
+    {
+        return $this->CoinType;
     }
 
     /**
@@ -111,6 +121,7 @@ class ShopItem
         }
         $this->name = $shopItem->name;
         $this->description = $shopItem->description;
+        $this->CoinType = $shopItem->CoinType;
         $this->price = $shopItem->price;
         $this->amount = $shopItem->amount;
         $this->purchases_num = $shopItem->purchases_num;

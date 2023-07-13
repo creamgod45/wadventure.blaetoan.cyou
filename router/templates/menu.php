@@ -18,6 +18,10 @@
         <div class="icon"><i class="fa-solid fa-ranking-star"></i></div>
         <div class="name">排行榜</div>
     </a>
+    <a href="<?= $Utils->getInstanceAddress(true) ?>/shop.php" class="menu-item">
+        <div class="icon"><i class="fa-solid fa-store"></i></div>
+        <div class="name">線上商店</div>
+    </a>
     <a href="https://wadventure.blaetoan.cyou/" class="menu-item">
         <div class="icon"><i class="fa-brands fa-wikipedia-w"></i></div>
         <div class="name">維基</div>

@@ -23,7 +23,8 @@ if (
     $member = $MemberManager::getMember($MemberManager::$ENUM_USE_USERNAME, $a);
     if ($MemberManager->login($member, $b)) {
         $Utils->goto_page([2, "/index.php"]);
-        $Request->SESSION('member', true)->Set($member);
+        $Request->SESSION('member', true)->Set($member->toArray());
+        $Utils->pinv($member);
         include_once "@login_success.php";
     } else {
         $error_msg = (new Htmlv2("p"))

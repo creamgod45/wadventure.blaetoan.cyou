@@ -17,6 +17,9 @@ switch (router(1)) {
                 break;
         }
         break;
+    case 'shop.php':
+        include_once "router/@shop.php";
+        break;
     case 'profile.php':
         include_once "router/@profile.php";
         break;
